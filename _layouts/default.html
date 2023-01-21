@@ -13,6 +13,11 @@ layout: compress
   {% endif %}
 {% endcapture %}
 
+/* mathjax 추가 */
+{% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
+
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}"{{ prefer_mode }}>
 
